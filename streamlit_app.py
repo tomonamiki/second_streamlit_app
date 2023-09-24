@@ -15,7 +15,7 @@ st.subheader('Sub Header')
 st.text('Text')
 
 # 普通のテキストその２。Markdown のパースをする他、複数の値を渡せる。
-st.write('### Current date: ', date.today())
+# st.write('### Current date: ', date.today())
 
 # マークダウン。markdown 又は write
 st.markdown('*Markdown*')
