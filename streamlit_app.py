@@ -45,16 +45,24 @@ st.success('Success message')
 # 例外メッセージ。Exception部分が太字の赤文字・薄赤背景
 st.exception(Exception('Ooops!'))
 
-# 辞書型データ（JSON）の表示。各階層に折り畳み機能付
-dictData = {
-  'foo': 'bar',
-  'users': [
-    'alice',
-    'bob',
-  ],
-}
-st.json(d)
+def create_random_graphs():
+    # ランダムなデータの作成
+    data = {
+        'x': np.random.random(20),
+        'y': np.random.random(20) - 0.5,
+        'z': np.random.random(20) - 1.0,
+        }
+    df = pd.DataFrame(data)
 
-# 折り畳み表示
-with st.expander('Expander title'):
-  st.json(d)
+    # ラインチャート
+    objLchart = st.line_chart(df)
+
+    # エリアチャート
+    objAchart = st.area_chart(df)
+
+    # バーチャート
+    objBchart = st.bar_chart(df)
+
+    # チャートにデータを動的に追加する場合
+    additional_data = np.random.random(size=(5,2))
+    objLchart.add_rows(additional_data)
