@@ -28,7 +28,7 @@ components.html('''
 ''')
 
 # コードブロック
-st.codde('print("Hello World!")')
+# st.codde('print("Hello World!")')
 
 # エラーメッセージ。赤文字に薄赤背景
 st.error('Error message')
