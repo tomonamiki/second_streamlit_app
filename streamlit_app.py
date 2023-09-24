@@ -3,6 +3,6 @@ import pandas
 import requests
 
 
-streamlit.title('Professional Services & Training Biz Dashboard')
-streamlit.header('Quartery Trends')
+st.title('Professional Services & Training Biz Dashboard')
+st.header('Quartery Trends')
 st.text('stでもOKなのです')
